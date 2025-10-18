@@ -78,6 +78,7 @@ const HeroSection = () => {
           variants={containerVariants}
           className="w-full md:w-[50%] flex flex-wrap justify-between gap-2 h-full"
         >
+          
           {weatherData.map((d, i) => (
             <motion.div
               key={i}
