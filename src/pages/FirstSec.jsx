@@ -1,61 +1,3 @@
-// import React from "react";
-// import { IoIosCloudOutline } from "react-icons/io";
-
-// const FirstSec = () => {
-//   return (
-//     <div className="h-[34rem] w-full flex justify-center items-center">
-//       <div className="grid grid-cols-2 gap-6 w-[90%] h-[90%]">
-//         <section className="h-[14rem] w-full bg-[#1B1B1D] rounded-md  text-white p-2">
-//           <h1 className="text-lg font-light">Wind Status</h1>
-//           <img src="wind.png" alt="wind" className="mt-16 w-full h-12  " />
-//           <div className="h-[4rem] w-full flex mt-3 items-center justify-between">
-//             <h4 className="font-bold">
-//               7.50 <span className="text-sm font-normal">km/h</span>
-//             </h4>
-//             <p className="text-base">6.20 AM</p>
-//           </div>
-//         </section>
-
-//         <section className="h-[14rem] w-full bg-[#1B1B1D] rounded-md p-2 text-white">
-//           <h1 className="text-lg font-light ml-5">UV Indesx</h1>
-//           <img src="speed.png" alt="wind" className="mt-4 mx-auto" />
-//           <h1 className="text-center font-bold">5.50 UV</h1>
-//         </section>
-//         <section className="h-[14rem] w-full bg-[#1B1B1D] rounded-md p-2  text-white">
-//                       <h1 className="text-lg font-light">Humidity</h1>
-// <IoIosCloudOutline className="mt-4 mx-auto text-[100px]" />
-// <div className="h-[4rem] w-full flex mt-3 ">
-//             <h4 className="font-bold">
-//               84%
-//             </h4>
-//             <img src="new.png" className="h-6 w-6 ml-2 md:mb-0 mb-3 md:ml-20" alt="" />
-//   <div className="flex flex-col leading-tight  text-[#818085]">
-//     <p className="text-sm">The dew point is 270</p>
-//     <p className="text-sm">right now</p>
-//   </div>
-//           </div>
-//         </section>
-//         <section className="h-[14rem] w-full bg-[#1B1B1D] rounded-md p-2  text-white">
-//                       <h1 className="text-lg font-light">Visibility </h1>
-//                                 <img src="visi.png" alt="wind" className=" w-20 h-20 mx-auto mt-2  " />
-
-// <div className="h-[4rem] w-full flex mt-10 ">
-//             <h4 className="font-bold">
-//               04 km
-//             </h4>
-//             <img src="eye.png" className="h-6 w-6 ml-2 md:mb-0 mb-3 md:ml-20" alt="" />
-//   <div className="flex flex-col leading-tight text-[#818085]">
-//     <p className="text-sm ml-1">Haze is affecting </p>
-//     <p className="text-sm ml-1">visibility</p>
-//   </div>
-//           </div>
-//         </section>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default FirstSec;
 import React from "react";
 import { motion } from "framer-motion";
 import { IoIosCloudOutline } from "react-icons/io";
@@ -73,12 +15,11 @@ const FirstSec = () => {
   return (
     <div className="min-h-[34rem] w-full flex justify-center items-center py-6">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-[95%] sm:w-[90%] h-auto">
-        {/* Wind Status */}
         <motion.section
           variants={cardVariant}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="h-auto bg-[#1B1B1D] rounded-md text-white p-4 flex flex-col justify-between"
         >
           <div>
@@ -97,12 +38,11 @@ const FirstSec = () => {
           </div>
         </motion.section>
 
-        {/* UV Index */}
         <motion.section
           variants={cardVariant}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="h-auto bg-[#1B1B1D] rounded-md text-white p-4 flex flex-col justify-between"
         >
           <h1 className="text-lg font-light sm:ml-5">UV Index</h1>
@@ -116,23 +56,18 @@ const FirstSec = () => {
           </h1>
         </motion.section>
 
-        {/* Humidity */}
         <motion.section
           variants={cardVariant}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="h-auto bg-[#1B1B1D] rounded-md text-white p-4 flex flex-col justify-between"
         >
           <h1 className="text-lg font-light">Humidity</h1>
           <IoIosCloudOutline className="mt-4 mx-auto text-[80px] sm:text-[100px]" />
           <div className="flex flex-wrap items-center mt-3">
             <h4 className="font-bold text-lg sm:text-xl">84%</h4>
-            <img
-              src="new.png"
-              className="h-6 w-6 ml-2 sm:ml-8"
-              alt="new"
-            />
+            <img src="new.png" className="h-6 w-6 ml-2 sm:ml-8" alt="new" />
             <div className="flex flex-col leading-tight text-[#818085] ml-3">
               <p className="text-sm">The dew point is 270</p>
               <p className="text-sm">right now</p>
@@ -140,12 +75,11 @@ const FirstSec = () => {
           </div>
         </motion.section>
 
-        {/* Visibility */}
         <motion.section
           variants={cardVariant}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="h-auto bg-[#1B1B1D] rounded-md text-white p-4 flex flex-col justify-between"
         >
           <h1 className="text-lg font-light">Visibility</h1>
@@ -156,11 +90,7 @@ const FirstSec = () => {
           />
           <div className="flex flex-wrap items-center mt-4">
             <h4 className="font-bold text-lg sm:text-xl">04 km</h4>
-            <img
-              src="eye.png"
-              className="h-6 w-6 ml-2 sm:ml-8"
-              alt="eye"
-            />
+            <img src="eye.png" className="h-6 w-6 ml-2 sm:ml-8" alt="eye" />
             <div className="flex flex-col leading-tight text-[#818085] ml-3">
               <p className="text-sm">Haze is affecting</p>
               <p className="text-sm">visibility</p>

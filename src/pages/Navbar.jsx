@@ -3,7 +3,6 @@ import React from "react";
 const Navbar = () => {
   return (
     <nav className="w-full bg-black flex flex-wrap items-center justify-between px-4 py-3">
-      {/* Left Section */}
       <div className="flex items-center space-x-3">
         <section className="h-9 w-9 rounded-full bg-[#1E1E1E] flex justify-center items-center">
           <img src="img1.png" alt="icon" className="h-4" />
@@ -18,9 +17,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Middle + Right Section together */}
       <div className="flex items-center gap-6 mt-3 sm:mt-0">
-        {/* Search Section */}
         <div className="flex items-center bg-[#1E1E1E] rounded-md px-3 py-2 w-[14rem] sm:w-[18rem] md:w-[23rem]">
           <img src="meg.png" alt="search" className="h-5 mr-3" />
           <input
@@ -30,7 +27,6 @@ const Navbar = () => {
           />
         </div>
 
-        {/* Developer Section */}
         <div className="flex items-center gap-3">
           <h4 className="text-white text-sm sm:text-base">
             Developed by <span className="font-semibold text-[#FEFEFE]">Tanzeel</span>
