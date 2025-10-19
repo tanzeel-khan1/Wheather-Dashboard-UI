@@ -45,7 +45,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <div className="bg-black">
+    <div className="bg-black h-full">
       <motion.div
         className="w-full bg-black flex flex-col md:flex-row items-stretch gap-4 p-4 rounded-xl shadow-lg h-[20rem] md:h-64"
         initial="hidden"
@@ -74,7 +74,7 @@ const HeroSection = () => {
           </div>
         </motion.div>
 
-        <motion.div
+        {/* <motion.div
           variants={containerVariants}
           className="w-full md:w-[50%] flex flex-wrap justify-between gap-2 h-full"
         >
@@ -95,7 +95,30 @@ const HeroSection = () => {
               <h1 className="text-lg font-bold">{d.temp}°</h1>
             </motion.div>
           ))}
-        </motion.div>
+        </motion.div> */}
+        <motion.div
+  variants={containerVariants}
+  className="w-full bg-black   md:w-[50%] grid grid-cols-3 md:flex md:flex-wrap justify-between gap-2 h-full"
+>
+  {weatherData.map((d, i) => (
+    <motion.div
+      key={i}
+      variants={cardVariants}
+      whileHover={{ scale: 1.05 }}
+      className="flex flex-col items-center justify-center bg-[#1E1E1E] backdrop-blur-md rounded-xl p-2 text-white shadow-md
+                 h-full w-full md:w-[14%] min-w-[50px]"
+    >
+      <p className="text-xs font-semibold">{d.day}</p>
+      <img
+        src={d.img}
+        alt={d.day}
+        className="w-8 h-8 my-1 object-contain"
+      />
+      <h1 className="text-lg font-bold">{d.temp}°</h1>
+    </motion.div>
+  ))}
+</motion.div>
+
 
         <motion.div
           variants={cardVariants}
