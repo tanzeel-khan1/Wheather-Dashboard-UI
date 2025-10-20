@@ -1,5 +1,6 @@
 import React from "react";
 import FirstSec from "./FirstSec";
+import ImgSec from "./ImgSec";
 
 const TodayOverview = () => {
   return (
@@ -13,9 +14,9 @@ const TodayOverview = () => {
 
       <div
         className="w-full
-       sm:w-1/4 md:w-1/4 bg-green-500 min-h-[15rem] flex items-center justify-center"
+       sm:w-1/4 md:w-1/4 bg-green-500 min-h-[15rem] p-2.5 "
       >
-        <p className="text-white font-semibold">Middle Section</p>
+<ImgSec/>
       </div>
 
       <div className="w-full sm:w-1/4 md:w-1/4 bg-green-800 min-h-[15rem] flex items-center justify-center">
