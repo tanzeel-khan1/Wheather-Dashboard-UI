@@ -14,7 +14,7 @@ const cardVariant = {
 const FirstSec = () => {
   return (
     <div className="min-h-[34rem] w-full flex justify-center items-center py-6">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-[95%] sm:w-[90%] h-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-[95%] sm:w-[90%] h-auto mr-0 md:mr-11">
         <motion.section
           variants={cardVariant}
           initial="hidden"

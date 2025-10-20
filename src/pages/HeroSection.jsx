@@ -50,7 +50,7 @@ const HeroSection = () => {
         className="w-full bg-black flex flex-col md:flex-row items-stretch gap-4 p-4 rounded-xl shadow-lg h-[20rem] md:h-64"
         initial="hidden"
         whileInView="show"
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.3 }}
         variants={containerVariants}
       >
         <motion.div
