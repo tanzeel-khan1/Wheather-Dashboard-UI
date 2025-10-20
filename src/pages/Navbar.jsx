@@ -17,6 +17,7 @@ const Navbar = () => {
         </div>
       </div>
 
+
       <div className="flex items-center gap-6 mt-3 sm:mt-0">
         <div className="flex items-center bg-[#1E1E1E] rounded-md px-3 py-2 w-[14rem] sm:w-[18rem] md:w-[23rem]">
           <img src="meg.png" alt="search" className="h-5 mr-3" />
@@ -29,7 +30,8 @@ const Navbar = () => {
 
         <div className="flex items-center gap-3">
           <h4 className="text-white text-sm sm:text-base">
-            Developed by <span className="font-semibold text-[#FEFEFE]">Tanzeel</span>
+            Developed by{" "}
+            <span className="font-semibold text-[#FEFEFE]">Tanzeel</span>
           </h4>
           <img
             src="mereal.png"
