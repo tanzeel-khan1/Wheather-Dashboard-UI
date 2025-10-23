@@ -15,23 +15,27 @@ const TodayOverview = () => {
             <FirstSec />
           </div>
 
-      <div
-        className="w-full
+          <div
+            className="w-full
        sm:w-1/4 md:w-1/4 min-h-[15rem] md:p-2.5 p-5 "
-      >
-<ImgSec/>
-      </div>
+          >
+            <ImgSec />
+          </div>
 
-      <div className="w-full sm:w-1/4 md:w-1/4  min-h-[15rem]">
-      <nav className="h-7 w-full flex">
-        <p className="text-[#FFFFFF] ml-7 md:ml-4">Other Cities</p>
-        <p className="md:ml-42 ml-42 text-[#FFFFFF]">See All</p>
-      </nav>
+          <div className="w-full sm:w-1/4 md:w-1/4  min-h-[15rem]">
+            <nav className="h-7 w-full flex">
+              <p className="text-[#FFFFFF] ml-7 md:ml-4 cursor-pointer ">
+                Other Cities
+              </p>
+              <p className="md:ml-42 ml-42 text-[#FFFFFF] cursor-pointer hover:text-[#BBD7EC]">
+                See All
+              </p>
+            </nav>
+            <City />
+          </div>
+        </div>
       </div>
-    </div>
-   </div>
-    
-   </>
+    </>
   );
 };
 
