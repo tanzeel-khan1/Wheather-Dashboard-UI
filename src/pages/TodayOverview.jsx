@@ -1,6 +1,7 @@
 import React from "react";
 import FirstSec from "./FirstSec";
 import ImgSec from "./ImgSec";
+import City from "./City";
 
 const TodayOverview = () => {
   return (
@@ -16,13 +17,16 @@ const TodayOverview = () => {
 
       <div
         className="w-full
-       sm:w-1/4 md:w-1/4 bg-green-500 min-h-[15rem] p-2.5 "
+       sm:w-1/4 md:w-1/4 min-h-[15rem] md:p-2.5 p-5 "
       >
 <ImgSec/>
       </div>
 
-      <div className="w-full sm:w-1/4 md:w-1/4 bg-green-800 min-h-[15rem] flex items-center justify-center">
-        <p className="text-white font-semibold">Right Section</p>
+      <div className="w-full sm:w-1/4 md:w-1/4  min-h-[15rem]">
+      <nav className="h-7 w-full flex">
+        <p className="text-[#FFFFFF] ml-7 md:ml-4">Other Cities</p>
+        <p className="md:ml-42 ml-42 text-[#FFFFFF]">See All</p>
+      </nav>
       </div>
     </div>
    </div>

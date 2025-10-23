@@ -55,49 +55,47 @@ const HeroSection = () => {
       >
         <motion.div
           variants={cardVariants}
-          className="w-full md:w-[25%] bg-[#1E1E1E] backdrop-blur-md rounded-xl p-4 flex flex-col justify-between shadow-md h-full"
+          className="w-full md:w-[25%] bg-[#BBD7EC] backdrop-blur-md rounded-xl p-4 flex flex-col justify-between shadow-md h-full"
         >
           <div>
-            <h4 className="text-white font-semibold text-lg mb-1">Friday</h4>
-            <p className="text-white/80 text-sm mb-2">11:45 AM</p>
+            <h4 className=" font-semibold text-lg mb-1">Friday</h4>
+            <p className=" text-sm mb-2">11:45 AM</p>
           </div>
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-4xl font-bold text-white relative">
+              <h1 className="text-4xl font-bold relative">
                 16
                 <span className="absolute -top-2 left-10 text-xl">°</span>
               </h1>
-              <p className="text-white/80 text-sm mt-1">Real Feel 18°</p>
-              <p className="text-white/80 text-sm">Wind N-E 6-7 km/h</p>
+              <p className=" text-sm mt-1">Real Feel 18°</p>
+              <p className=" text-sm">Wind N-E 6-7 km/h</p>
             </div>
             <img src="sun.png" className="w-16 h-16" alt="Sun" />
           </div>
         </motion.div>
 
-        
         <motion.div
-  variants={containerVariants}
-  className="w-full bg-black   md:w-[50%] grid grid-cols-3 md:flex md:flex-wrap justify-between gap-2 h-full"
->
-  {weatherData.map((d, i) => (
-    <motion.div
-      key={i}
-      variants={cardVariants}
-      whileHover={{ scale: 1.05 }}
-      className="flex flex-col items-center justify-center bg-[#1E1E1E] backdrop-blur-md rounded-xl p-2 text-white shadow-md
+          variants={containerVariants}
+          className="w-full bg-black   md:w-[50%] grid grid-cols-3 md:flex md:flex-wrap justify-between gap-2 h-full"
+        >
+          {weatherData.map((d, i) => (
+            <motion.div
+              key={i}
+              variants={cardVariants}
+              whileHover={{ scale: 1.05 }}
+              className="flex flex-col items-center justify-center bg-[#1E1E1E] backdrop-blur-md rounded-xl p-2 text-white shadow-md
                  h-full w-full md:w-[14%] min-w-[50px]"
-    >
-      <p className="text-xs font-semibold">{d.day}</p>
-      <img
-        src={d.img}
-        alt={d.day}
-        className="w-8 h-8 my-1 object-contain"
-      />
-      <h1 className="text-lg font-bold">{d.temp}°</h1>
-    </motion.div>
-  ))}
-</motion.div>
-
+            >
+              <p className="text-xs font-semibold">{d.day}</p>
+              <img
+                src={d.img}
+                alt={d.day}
+                className="w-8 h-8 my-1 object-contain"
+              />
+              <h1 className="text-lg font-bold">{d.temp}°</h1>
+            </motion.div>
+          ))}
+        </motion.div>
 
         <motion.div
           variants={cardVariants}
